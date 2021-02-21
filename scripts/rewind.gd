@@ -31,6 +31,7 @@ func handle_rewind_objects():
 				var ghost : Sprite = rewind_ghost.instance()
 				ghost.texture = ani.frames.get_frame(ani.animation,ani.frame)
 				ghost.global_position = mem.global_position
+				ghost.flip_h = ani.flip_h
 				get_parent().add_child(ghost)
 				
 				#remove thet first frame as we've just used it
